@@ -14,7 +14,7 @@ git submodule add [submodule-repo-url]
 git submodule init
 ```
 
-## Monday 10:30 AM. (Edit the code inside the submodule),
+## Monday 10:30 AM. (Edit the code inside the submodule)
 
 - Till now, You've not pushed any code to remote yet..
 - You've edited the files of the hosted submodule:
@@ -35,7 +35,7 @@ git push # the root project online repo is updated
 - Online, You've created a pull request, the code reviewe is done, pull request is accepted and merged into origin/develop.. 
 - Now, your teammates should merge the new code to their local copies.. **WHAT ARE THE NEXT STEPS**? (LET'S FIND OUT..)
 
-## Tuesday 10:00 AM (Update the project and the hosted submodule codes)
+## Tuesday 10:00 AM (Update the project + submodule's code)
 
 - Before you continue working on your local branch, you have to check if origin/develop has any new updates.. 
 
@@ -103,7 +103,7 @@ git submodule update --recursive --remote
 git clone --recurse-submodules [repo-url]
 ```
 
-2. You've cloned a repo with `git clone [repo-url]` but forget about the submodules..
+2. You've cloned a repo with `git clone [repo-url]` but forgot about the submodules..
 
 ```
 git submodule update --init --recursive
