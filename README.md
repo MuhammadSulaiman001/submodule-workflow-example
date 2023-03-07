@@ -23,7 +23,7 @@ git submodule init
 git add . # inside submodule directory
 git commit -m "submodule code edits are done"
 git push # the submodule remote repo is updated
-cd ../.. # back to the root folder
+cd ../.. # back to the root directory
 git status # will tell you that the pointer of the submodule is updated
 git add .
 git commit -m "submodule code pushed 2 minutes ago"
@@ -66,7 +66,7 @@ git merge origin/develop
 git submodule update --recursive --remote 
 ```
 
-- Now, try `git status` in both the root folder and inside the submodule folder and you'll find them both clean..
+- Now, try `git status` in both the root directory and inside the submodule directory and you'll find them both clean..
 
 
 ## To conclude:
@@ -83,13 +83,34 @@ git submodule update --recursive --remote
 
 ## Remove a submodule
 
-1. `git rm path/to/submodule`
+1. `git rm path/to/submodule` # you're at the root directory of the git repo
 
 2. Manually Clean up:
     1. Remove the submodule code directory
-    2. Open the .git hidden folder, 
-        1. In modules folder, remove Submodule-name directory..
+    2. Open .git hidden directory, 
+        1. In modules directory, remove Submodule-name directory..
         2. Open cofig file and remove the text that mentions the submodule-name
     3. Open .gitmodules file and remove the text that refers to the submodule-name
 
 3. [Optional]: `git rm --cached mymodule # may not be needed`
+
+
+## Misc
+
+1. You want to clone a repo with its submodules
+
+```
+git clone --recurse-submodules [repo-url]
+```
+
+2. You've cloned a repo with `git clone [repo-url]` but forget about the submodules..
+
+```
+git submodule update --init --recursive
+```
+
+3. You've opend the terminal and wonder if there are any updates to the remote submodules 
+
+```
+git fetch --recurse-submodules
+```
