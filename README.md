@@ -78,3 +78,18 @@ git submodule update --recursive --remote
 2. Edit a submodule's code
     1. Perform add, commit, and push inside submodule directory, 
     2. Then perform add, commit and push inside the base project directory..
+
+---
+
+## Remove a submodule
+
+1. `git rm path/to/submodule`
+
+2. Manually Clean up:
+    1. Remove the submodule code directory
+    2. Open the .git hidden folder, 
+        1. In modules folder, remove Submodule-name directory..
+        2. Open cofig file and remove the text that mentions the submodule-name
+    3. Open .gitmodules file and remove the text that refers to the submodule-name
+
+3. [Optional]: `git rm --cached mymodule # may not be needed`
