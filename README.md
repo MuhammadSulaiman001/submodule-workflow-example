@@ -83,9 +83,9 @@ git submodule update --recursive --remote
 
 ## Remove a submodule
 
-1. `git rm path/to/submodule` # you're at the root directory of the git repo
+1. `git rm path/to/submodule # you're at the root directory of the git repo`
 
-2. Manually Clean up:
+2. Manual clean up:
     1. Remove the submodule code directory
     2. Open .git hidden directory, 
         1. In modules directory, remove Submodule-name directory..
